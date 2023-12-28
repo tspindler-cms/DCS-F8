@@ -340,92 +340,102 @@ Guns = {
 			MG_20({muzzle_pos = {1.2,  -1.2, -0.45 }	, rates = {500},mixes = {{1,1,2,1,2,1}},effect_arg_number = 350,azimuth_initial = 0,elevation_initial = 0,supply_position = {2, -0.3,  0.4}}), --up
 			MG_20({muzzle_pos = {0.8,  -0.9, -0.4}	, rates = {500},mixes = {{1,2,1,2,2,1}},effect_arg_number = 350,azimuth_initial = 0,elevation_initial = 0,supply_position = {2, -0.3,  0.4}}), --center
 			
-			 },
+	    },
 
+Pylons = {
+            pylon(1, 0, 1.2, 2.50, -1.60,
+                {
+                    use_full_connector_position = false,connector = "pylon_1",
+                },
+                {
+                    { CLSID = "LAU3_HE151" }, --LAU-3 HE M151
+                    -- { CLSID = "{AIM-7E}" }, --AIM-7E (Fox-1s here just in case you decide to add them)
+                    -- { CLSID = "{AIM-7F}" }, --AIM-7F 
+                    -- { CLSID = "{R530F_EM}" }, --R.530 EM (carried by marine nationale on long fuselage pylons)
+                    -- { CLSID = "{R530F_IR}" }, --R.530 IR (carried by marine nationale on long fuselage pylons)
+                    { CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
+                    { CLSID = "{BRU33_2*LAU10}"},
+                    { CLSID = "{BRU41_6X_MK-82}" },
+                    { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
+                    { CLSID = "{AGM_12A}" }, --someday
+                    { CLSID = "{AGM_12B}" }, --someday
+                }
+            ),
+            pylon(2, 0, 1.2, 2.40, -1.75,
+                {
+                    use_full_connector_position = false,connector = "pylon_3",
+                },
+                {
+                        --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.4,  0.2, 0.0}}, --AIM-9M
+                        { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
+                        { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
+                        { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
+                    --  { CLSID = "{HVARx2}"},
+                }
+            ),
+            pylon(3, 0, 1.2, 1.34, 1.75,
+                {
+                    use_full_connector_position = false,connector = "pylon_6",
+                },
+                {
+                        --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9M
+                        { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
+                        { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
+                        { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
+                    --  { CLSID = "{HVARx2}"},  
+                }
+            ),
+            pylon(4, 0, 1.2, 1.34, 1.60,
+                {
+                    use_full_connector_position = false,connector = "pylon_4",
+                },
+                {
+                        --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9M
+                        { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
+                        { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
+                        { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
+                    --  { CLSID = "{HVARx2}"},
+                }
+            ),
+            pylon(5, 0, 1.2, 1.34, 1.75,
+                {
+                    use_full_connector_position = false,connector = "pylon_5",
+                },
+                {
+                        --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.0,  0.2, 0.0}}, --AIM-9M
+                        { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
+                        { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
+                        { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
+                    --  { CLSID = "{HVARx2}"},
+                }
+            ),
+            pylon(6, 0, 1.2, 1.34, 1.60,
+                {
+                    use_full_connector_position = false,connector = "pylon_2",
+                },
+                {
+                    { CLSID = "LAU3_HE151" }, --LAU-3 HE M151
+                    -- { CLSID = "{AIM-7E}" }, --AIM-7E (Fox-1s here just in case you decide to add them)
+                    -- { CLSID = "{AIM-7F}" }, --AIM-7F 
+                    -- { CLSID = "{R530F_EM}" }, --R.530 EM (carried by marine nationale on long fuselage pylons)
+                    -- { CLSID = "{R530F_IR}" }, --R.530 IR (carried by marine nationale on long fuselage pylons)
+                    { CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
+                    { CLSID = "{BRU33_2*LAU10}"},
+                    { CLSID = "{BRU41_6X_MK-82}" },
+                    { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
+                    { CLSID = "{AGM_12A}" }, --someday
+                    { CLSID = "{AGM_12B}" }, --someday
+                }
+            ),  
+            pylon(7, 0, 1.2, 1.34, 1.60, --?????
+                {
+                    use_full_connector_position = false,connector = "pylon_7",
+                },
+                {
 
-
-	
-
-	
-		Pylons =     {
-         pylon(1, 0, 1.2, 2.50, -1.60,
-            {
-                use_full_connector_position = false,connector = "pylon_1",
-            },
-            {
-				{ CLSID = "LAU3_HE151" }, --LAU-3 HE M151
-                { CLSID = "{LAU-115 - AIM-7E}" }, --AIM-7E	
-                { CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
-				{ CLSID = "{BRU33_2*LAU10}"},
-                { CLSID = "{BRU41_6X_MK-82}" },
-            }
-        ),
-       pylon(2, 0, 1.2, 2.40, -1.75,
-            {
-				use_full_connector_position = false,connector = "pylon_3",
-            },
-            {
-				--{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.4,  0.2, 0.0}}, --AIM-9M
-                { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
-                { CLSID = "{AIM-9L}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9L
-			--	{ CLSID = "{HVARx2}"},
-            }
-        ),
-        pylon(3, 0, 1.2, 1.34, 1.75,
-            {
-				use_full_connector_position = false,connector = "pylon_6",
-            },
-            {
-				--{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9M
-                { CLSID = "{GAR-8}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9B
-                { CLSID = "{LAU-7 - AIM-9L}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9L
-			--	{ CLSID = "{HVARx2}"},	
-            }
-        ),
-		pylon(4, 0, 1.2, 1.34, 1.60,
-            {
-				use_full_connector_position = false,connector = "pylon_4",
-            },
-            {
-				--{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9M
-                { CLSID = "{GAR-8}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9B
-                { CLSID = "{LAU-7 - AIM-9L}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9L
-			--	{ CLSID = "{HVARx2}"},
-            }
-        ),
-      	pylon(5, 0, 1.2, 1.34, 1.75,
-            {
-				use_full_connector_position = false,connector = "pylon_5",
-            },
-            {
-				--{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.0,  0.2, 0.0}}, --AIM-9M
-                { CLSID = "{AIM-9B}"  ,attach_point_position = {0.0,  0.05, 0.0}}, --AIM-9B
-                { CLSID = "{AIM-9L}" ,attach_point_position = {0.0,  0.05, 0.0}}, --AIM-9L
-			--	{ CLSID = "{HVARx2}"},
-            }
-        ),
-		pylon(6, 0, 1.2, 1.34, 1.60,
-            {
-				use_full_connector_position = false,connector = "pylon_2",
-            },
-            {
-				{ CLSID = "LAU3_HE151" }, --LAU-3 HE M151
-                { CLSID = "{LAU-115 - AIM-7E}" }, --AIM-7E	
-                { CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
-				{ CLSID = "{BRU33_2*LAU10}"},
-                { CLSID = "{BRU41_6X_MK-82}" },
-            }
-        ),	
-				pylon(7, 0, 1.2, 1.34, 1.60,
-            {
-				use_full_connector_position = false,connector = "pylon_7",
-            },
-            {
-			
-            }
-        ),
-      
-     },
+                }
+            ),
+},
 	
 	Tasks = {
         aircraft_task(CAP),
@@ -433,11 +443,11 @@ Guns = {
       	aircraft_task(FighterSweep),
 		aircraft_task(Intercept),
 		aircraft_task(Reconnaissance),
---  	aircraft_task(GroundAttack),
---     	aircraft_task(CAS),
+    	aircraft_task(GroundAttack),
+     	aircraft_task(CAS),
 --      aircraft_task(AFAC),
 --	    aircraft_task(RunwayAttack),
---  	aircraft_task(AntishipStrike),
+    	aircraft_task(AntishipStrike),
     },	
 	DefaultTask = aircraft_task(FighterSweep),
 
