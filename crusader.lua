@@ -1,3 +1,4 @@
+local launch_bar_connected_arg_value_   = 1.00
 
 --Ammunition MG 20
 local tracer_on_time = 0.01
@@ -176,12 +177,36 @@ crusader =  {
 	range	=	2372,
 	crew_size	=	1,
 	RCS	=	1.8,			
-		IR_emission_coeff	=	0.58,
-		IR_emission_coeff_ab	=	2.5,
-		engines_count	=	1,
-		nose_gear_wheel_diameter	=	0.566,
-		main_gear_wheel_diameter	=	0.778,
-		
+	IR_emission_coeff	=	0.58,
+	IR_emission_coeff_ab	=	2.5,
+	engines_count	=	1,
+	nose_gear_wheel_diameter	=	0.566,
+	main_gear_wheel_diameter	=	0.778,
+
+	-- TeTeT: attempt to hook up to cat on carrier, copied from VSN F-4B
+	launch_bar_connected_arg_value = launch_bar_connected_arg_value_,
+
+	LaunchBar = {
+		{Transition = {"Retract", "Extend"}, Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "to", 1.00, "in", 0.4}}}}},
+        {Transition = {"Retract", "Stage"},  Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "to", 0.93, "in", 4.4}}}}},
+		{Transition = {"Any", "Retract"},  Sequence = {{C = {{"ChangeDriveTo", "Hydraulic"}, {"VelType", 2}, {"Arg", 85, "to", 0.000, "in", 0.02}}}}},--4.5 LaunchBar Hoch
+		{Transition = {"Extend", "Stage"},   Sequence = {
+									{C = {{"ChangeDriveTo", "Mechanical"}, {"Sleep", "for", 0.000}}},
+									{C = {{"Arg", 85, "from", 1.00, "to", 0.92, "in", 0.600}}},
+									{C = {{"Arg", 85, "from", 0.92, "to", 0.93, "in", 0.200}}},
+									{C = {{"Sleep", "for", 0.15}}},
+									{C = {{"Arg", 85, "from", 0.93, "to", 0.95, "in", 0.1, "sign", 2}}},
+									{C = {{"Arg", 85, "from", 0.95, "to", 1.00, "in", 0.1}}},
+							},
+					},
+		{Transition = {"Stage", "Pull"},  Sequence = {
+									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85,"from", 1.00, "to", launch_bar_connected_arg_value_, "in", 0.15}}},
+									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85, "to", 1.00, "speed", 0.1}}},
+									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85, "to", 1.00, "speed", 0.02}}},
+									}
+		},
+		{Transition = {"Stage", "Extend"},   Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "from", 1.00, "to", 1.00, "in", 0.2}}}}},
+	},	
 		
 	engines_count    = 1, -- added by Toan, otherwise smoke doesn't work, 27-12-2023 ----------------------
 	engines_nozzles = {

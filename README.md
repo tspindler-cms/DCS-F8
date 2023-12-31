@@ -1,6 +1,6 @@
 # General Information
 
-A mod of the F-8 Crusader for DCS, thanks to Hawkeye60 and Spino and the VSN team.
+A mod of the F-8 Crusader for DCS, thanks to Hawkeye60, Mario and Spino and the VSN team.
 
 With help from Toan and seabat.
 
@@ -14,7 +14,7 @@ Based on a VSN plane, kudos to the team!
 
 ## Thanks to:
 
-- Spino for the mod
+- Mario and Spino for the mod
 - Hawkeye for the updates
 - Pedro Caparros for the orignial livery
 - TeTeT for the USS Bon Homme Richard
