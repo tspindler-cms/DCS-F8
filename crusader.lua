@@ -1,4 +1,4 @@
-local launch_bar_connected_arg_value_   = 1.00
+local launch_bar_connected_arg_value_   = 0.815
 
 --Ammunition MG 20
 local tracer_on_time = 0.01
@@ -200,7 +200,7 @@ crusader =  {
 							},
 					},
 		{Transition = {"Stage", "Pull"},  Sequence = {
-									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85,"from", 1.00, "to", launch_bar_connected_arg_value_, "in", 0.15}}},
+									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85,"from", 0.881, "to", launch_bar_connected_arg_value_, "in", 0.15}}},
 									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85, "to", 1.00, "speed", 0.1}}},
 									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85, "to", 1.00, "speed", 0.02}}},
 									}

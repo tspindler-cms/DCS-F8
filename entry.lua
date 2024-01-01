@@ -55,7 +55,7 @@ mount_vfs_texture_path  (current_mod_path.."/Textures/crusader")
 
 dofile(current_mod_path.."/Views.lua")
 make_view_settings('crusader', ViewSettings, SnapViews)
-make_flyable('crusader'	, current_mod_path..'/Cockpit/A10A/', {nil,old = true}, current_mod_path..'/Comm/')
+make_flyable('crusader'	, current_mod_path..'/Cockpit/A10A/', {nil, old = true}, current_mod_path..'/comm.lua')
 --make_flyable('crusader',current_mod_path..'/Cockpit/KneeboardRight/',{nil, old = 17}, current_mod_path..'/comm.lua')--SFM
 -------------------------------------------------------------------------------------
 
