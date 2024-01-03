@@ -1,4 +1,3 @@
-local launch_bar_connected_arg_value_   = 0.815
 
 --Ammunition MG 20
 local tracer_on_time = 0.01
@@ -101,9 +100,8 @@ crusader =  {
         
 	Name 				=   'crusader',
 	DisplayName			= _('F-8 Crusader'),
-	DisplayNameShort	= _('F-8'),
 	HumanCockpit 		= true,
-    HumanCockpitPath    	= current_mod_path..'/Cockpit/',
+    	HumanCockpitPath    	= current_mod_path..'/Cockpit/',
 	Picture 			= "crusader.png",
 	Rate 				= 40, -- RewardPoint in Multiplayer
 	Shape 				= "crusader",
@@ -119,7 +117,7 @@ crusader =  {
 			username	= 'crusader';
 			index    	=  WSTYPE_PLACEHOLDER;
 			classname   = "lLandPlane";
-	    	positioning = "BYNORMAL";
+	    		positioning = "BYNORMAL";
 		},
 		{
 			name  = "crusader-oblomok";
@@ -156,20 +154,20 @@ crusader =  {
 	has_speedbrake	=	true,
 	radar_can_see_ground	=	true,	
 		
-	nose_gear_pos = 	{0.98, -2.100,	0},	----1.990
-	main_gear_pos = 	{-6.95, -1.90, 1.4},	----2.012
-	wing_tip_pos =  	{-5.214,-0.7, 5.35},-- wingtip coords for visual effects  -- was -10.214, by Toan, 28-12-2023 --------------
+		nose_gear_pos = 	{0.98, -2.100,	0},	----1.990
+		main_gear_pos = 	{-6.95, -1.90, 1.4},	----2.012
+	wing_tip_pos =      {-5.214,-0.7, 5.35},-- wingtip coords for visual effects  -- was -10.214, by Toan, 28-12-2023 --------------
 
 		
-	AOA_take_off	=	0.16,
-	stores_number	=	10,		
-	tand_gear_max	=	3.73,		
-	tanker_type	=	2,
+		AOA_take_off	=	0.16,
+		stores_number	=	10,		
+		tand_gear_max	=	3.73,		
+		tanker_type	=	2,
 	wing_area	=	34.84,
 	wing_span	=	10.87,
-	wing_type = 1,-- FIXED_WING = 0/VARIABLE_GEOMETRY = 1/FOLDED_WING = 2/ARIABLE_GEOMETRY_FOLDED = 3 -- should be 2 ? --------------
-	thrust_sum_max	=	15200,
-	thrust_sum_ab	=	25000,
+	wing_type = 1,-- FIXED_WING = 0/VARIABLE_GEOMETRY = 1/FOLDED_WING = 2/ARIABLE_GEOMETRY_FOLDED = 3
+		thrust_sum_max	=	15200,
+		thrust_sum_ab	=	25000,
 	length	=	16.53,
 	height	=	4.8,
 	flaps_maneuver	=	0.5,
@@ -177,50 +175,26 @@ crusader =  {
 	range	=	2372,
 	crew_size	=	1,
 	RCS	=	1.8,			
-	IR_emission_coeff	=	0.58,
-	IR_emission_coeff_ab	=	2.5,
-	engines_count	=	1,
-	nose_gear_wheel_diameter	=	0.566,
-	main_gear_wheel_diameter	=	0.778,
-
-	-- TeTeT: attempt to hook up to cat on carrier, copied from VSN F-4B
-	launch_bar_connected_arg_value = launch_bar_connected_arg_value_,
-
-	LaunchBar = {
-		{Transition = {"Retract", "Extend"}, Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "to", 1.00, "in", 0.4}}}}},
-        {Transition = {"Retract", "Stage"},  Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "to", 0.93, "in", 4.4}}}}},
-		{Transition = {"Any", "Retract"},  Sequence = {{C = {{"ChangeDriveTo", "Hydraulic"}, {"VelType", 2}, {"Arg", 85, "to", 0.000, "in", 0.02}}}}},--4.5 LaunchBar Hoch
-		{Transition = {"Extend", "Stage"},   Sequence = {
-									{C = {{"ChangeDriveTo", "Mechanical"}, {"Sleep", "for", 0.000}}},
-									{C = {{"Arg", 85, "from", 1.00, "to", 0.92, "in", 0.600}}},
-									{C = {{"Arg", 85, "from", 0.92, "to", 0.93, "in", 0.200}}},
-									{C = {{"Sleep", "for", 0.15}}},
-									{C = {{"Arg", 85, "from", 0.93, "to", 0.95, "in", 0.1, "sign", 2}}},
-									{C = {{"Arg", 85, "from", 0.95, "to", 1.00, "in", 0.1}}},
-							},
-					},
-		{Transition = {"Stage", "Pull"},  Sequence = {
-									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85,"from", 0.881, "to", launch_bar_connected_arg_value_, "in", 0.15}}},
-									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85, "to", 1.00, "speed", 0.1}}},
-									{C = {{"ChangeDriveTo", "Mechanical"}, {"VelType", 2}, {"Arg", 85, "to", 1.00, "speed", 0.02}}},
-									}
-		},
-		{Transition = {"Stage", "Extend"},   Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "from", 1.00, "to", 1.00, "in", 0.2}}}}},
-	},	
+		IR_emission_coeff	=	0.58,
+		IR_emission_coeff_ab	=	2.5,
+		engines_count	=	1,
+		nose_gear_wheel_diameter	=	0.566,
+		main_gear_wheel_diameter	=	0.778,
 		
-	engines_count    = 1, -- added by Toan, otherwise smoke doesn't work, 27-12-2023 ----------------------
-	engines_nozzles = {
-		[1] = 
-		{
-			pos			= {-9.2,	-0.5,	0}, -- nozzle coords ------ update by TeTeT 2023-12-30, and Toan, 27-12-2023 ------------
-			elevation			= 0, -- AFB cone elevation -------- was -0.1, by Toan, 29-12-2023 ---------
-			diameter			= 0.6, -- AFB cone diameter
-			exhaust_length_ab	= 4.0, -- lenght in m
-			exhaust_length_ab_K = 0.707, -- AB animation
-			smokiness_level     = 0.5, -- ------ update by Toan, 27-12-2023 -------------------------------- 
-			afterburner_circles_count = 3,
-		}, -- end of [1]		
-	}, -- end of engines_nozzles
+		
+    engines_count    = 1, -- added by Toan, otherwise smoke doesn't work, 27-12-2023 ----------------------
+    engines_nozzles = {
+        [1] = 
+        {
+            pos            = {-9.2,    -0.8,    0}, -- nozzle coords ------ update by Toan, 27-12-2023 --------
+            elevation            = -0.1, -- AFB cone elevation
+            diameter            = 0.6, -- AFB cone diameter
+            exhaust_length_ab    = 4.0, -- lenght in m
+            exhaust_length_ab_K = 0.707, -- AB animation
+            smokiness_level     = 0.5, -- ------ update by Toan, 27-12-2023 -------------------------------- 
+            afterburner_circles_count = 3,
+        }, -- end of [1]        
+    }, -- end of engines_nozzles 
 	
 	
 	
@@ -261,29 +235,31 @@ crusader =  {
 		}, -- end of fires_pos
 		
 	   Countermeasures = {
-			ECM = "AN/ALQ-165"
-		},
+ECM = "AN/ALQ-165"
+},
 
 
 	
 		passivCounterm = {
-			CMDS_Edit = true,
-			SingleChargeTotal = 500,
-			chaff = {default = 0, increment = 8, chargeSz = 1},
-			flare = {default = 500,  increment = 8, chargeSz = 1},
-		},
+		CMDS_Edit = true,
+		SingleChargeTotal = 500,
+		chaff = {default = 0, increment = 8, chargeSz = 1},
+		flare = {default = 500,  increment = 8, chargeSz = 1},
+	},
 
-		chaff_flare_dispenser 	= {	
-			{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, -0.878}, }, -- Flares 
-			{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, 0.878}, }, -- Flares 
-		},
+	chaff_flare_dispenser 	= {
+	
+		
+		{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, -0.878}, }, -- Flares 
+		{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, 0.878}, }, -- Flares 
+	},
 
 		mechanimations = {
         	FoldableWings = {
             	{Transition = {"Retract", "Extend"}, Sequence = {{C = {{"Arg", 8, "to", 0.0, "in", 5.0}}}}, Flags = {"Reversible"}},
             	{Transition = {"Extend", "Retract"}, Sequence = {{C = {{"Arg", 8, "to", 1.0, "in", 15.0}}}}, Flags = {"Reversible", "StepsBackwards"}},
-			},
-		}, -- end of mechanimations	
+        },
+    }, -- end of mechanimations	
 		
           
        LandRWCategories = 
@@ -368,115 +344,114 @@ Guns = {
 			 },
 
 Pylons = {
-	pylon(1, 0, 1.2, 2.50, -1.60,
-		{
-			use_full_connector_position = false,connector = "pylon_1",
-		},
-		{
-			{ CLSID = "LAU3_HE151" }, --LAU-3 HE M151
-			-- { CLSID = "{AIM-7E}" }, --AIM-7E (Fox-1s here just in case you decide to add them)
-			-- { CLSID = "{AIM-7F}" }, --AIM-7F 
-			-- { CLSID = "{R530F_EM}" }, --R.530 EM (carried by marine nationale on long fuselage pylons)
-			-- { CLSID = "{R530F_IR}" }, --R.530 IR (carried by marine nationale on long fuselage pylons)
-			{ CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
-			{ CLSID = "{BRU33_2*LAU10}"},
-			{ CLSID = "{BRU41_6X_MK-82}" },
-			{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
-			{ CLSID = "{AGM_12A}" }, --someday
-			{ CLSID = "{AGM_12B}" }, --someday
-		}
-	),
-	pylon(2, 0, 1.2, 2.40, -1.75,
-		{
-			use_full_connector_position = false,connector = "pylon_3",
-		},
-		{
-				--{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.4,  0.2, 0.0}}, --AIM-9M
-				{ CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
-				{ CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
-				{ CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
-			--  { CLSID = "{HVARx2}"},
-		}
-	),
-	pylon(3, 0, 1.2, 1.34, 1.75,
-		{
-			use_full_connector_position = false,connector = "pylon_6",
-		},
-		{
-				--{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9M
-				{ CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
-				{ CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
-				{ CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
-			--  { CLSID = "{HVARx2}"},  
-		}
-	),
-	pylon(4, 0, 1.2, 1.34, 1.60,
-		{
-			use_full_connector_position = false,connector = "pylon_4",
-		},
-		{
-				--{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9M
-				{ CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
-				{ CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
-				{ CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
-			--  { CLSID = "{HVARx2}"},
-		}
-	),
-	pylon(5, 0, 1.2, 1.34, 1.75,
-		{
-			use_full_connector_position = false,connector = "pylon_5",
-		},
-		{
-				--{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.0,  0.2, 0.0}}, --AIM-9M
-				{ CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
-				{ CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
-				{ CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
-			--  { CLSID = "{HVARx2}"},
-		}
-	),
-	pylon(6, 0, 1.2, 1.34, 1.60,
-		{
-			use_full_connector_position = false,connector = "pylon_2",
-		},
-		{
-			{ CLSID = "LAU3_HE151" }, --LAU-3 HE M151
-			-- { CLSID = "{AIM-7E}" }, --AIM-7E (Fox-1s here just in case you decide to add them)
-			-- { CLSID = "{AIM-7F}" }, --AIM-7F 
-			-- { CLSID = "{R530F_EM}" }, --R.530 EM (carried by marine nationale on long fuselage pylons)
-			-- { CLSID = "{R530F_IR}" }, --R.530 IR (carried by marine nationale on long fuselage pylons)
-			{ CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
-			{ CLSID = "{BRU33_2*LAU10}"},
-			{ CLSID = "{BRU41_6X_MK-82}" },
-			{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
-			{ CLSID = "{AGM_12A}" }, --someday
-			{ CLSID = "{AGM_12B}" }, --someday
-		}
-	),  
-	pylon(7, 0, 1.2, 1.34, 1.60, --?????
-		{
-			use_full_connector_position = false,connector = "pylon_7",
-		},
-		{
+        pylon(1, 0, 1.2, 2.50, -1.60,
+                {
+                        use_full_connector_position = false,connector = "pylon_1",
+                },
+                {
+                        { CLSID = "LAU3_HE151" }, --LAU-3 HE M151
+                        -- { CLSID = "{AIM-7E}" }, --AIM-7E (Fox-1s here just in case you decide to add them)
+                        -- { CLSID = "{AIM-7F}" }, --AIM-7F 
+                        -- { CLSID = "{R530F_EM}" }, --R.530 EM (carried by marine nationale on long fuselage pylons)
+                        -- { CLSID = "{R530F_IR}" }, --R.530 IR (carried by marine nationale on long fuselage pylons)
+                        { CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
+                        { CLSID = "{BRU33_2*LAU10}"},
+                        { CLSID = "{BRU41_6X_MK-82}" },
+                        { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
+                        { CLSID = "{AGM_12A}" }, --someday
+                        { CLSID = "{AGM_12B}" }, --someday
+                }
+        ),
+        pylon(2, 0, 1.2, 2.40, -1.75,
+                {
+                        use_full_connector_position = false,connector = "pylon_3",
+                },
+                {
+                                --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.4,  0.2, 0.0}}, --AIM-9M
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
+                                { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
+                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
+                        --  { CLSID = "{HVARx2}"},
+                }
+        ),
+        pylon(3, 0, 1.2, 1.34, 1.75,
+                {
+                        use_full_connector_position = false,connector = "pylon_6",
+                },
+                {
+                                --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9M
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
+                                { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
+                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
+                        --  { CLSID = "{HVARx2}"},  
+                }
+        ),
+        pylon(4, 0, 1.2, 1.34, 1.60,
+                {
+                        use_full_connector_position = false,connector = "pylon_4",
+                },
+                {
+                                --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9M
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
+                                { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
+                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
+                        --  { CLSID = "{HVARx2}"},
+                }
+        ),
+        pylon(5, 0, 1.2, 1.34, 1.75,
+                {
+                        use_full_connector_position = false,connector = "pylon_5",
+                },
+                {
+                                --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.0,  0.2, 0.0}}, --AIM-9M
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
+                                { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
+                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
+                        --  { CLSID = "{HVARx2}"},
+                }
+        ),
+        pylon(6, 0, 1.2, 1.34, 1.60,
+                {
+                        use_full_connector_position = false,connector = "pylon_2",
+                },
+                {
+                        { CLSID = "LAU3_HE151" }, --LAU-3 HE M151
+                        -- { CLSID = "{AIM-7E}" }, --AIM-7E (Fox-1s here just in case you decide to add them)
+                        -- { CLSID = "{AIM-7F}" }, --AIM-7F 
+                        -- { CLSID = "{R530F_EM}" }, --R.530 EM (carried by marine nationale on long fuselage pylons)
+                        -- { CLSID = "{R530F_IR}" }, --R.530 IR (carried by marine nationale on long fuselage pylons)
+                        { CLSID = "LAU3_HE5" }, --LAU-3 HEAT Mk5
+                        { CLSID = "{BRU33_2*LAU10}"},
+                        { CLSID = "{BRU41_6X_MK-82}" },
+                        { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
+                        { CLSID = "{AGM_12A}" }, --someday
+                        { CLSID = "{AGM_12B}" }, --someday
+                }
+        ),  
+	pylon(7, 0, 0.0, 1.00, 0.60,
+            {
+                        use_full_connector_position = false,connector = "pylon_7",
+            },
+            {
+                        { CLSID = "f8_pilot" }, --f8_pilot1
 
-		}
-	),
+            }
+        ),
 },
-			
-
+	
 	Tasks = {
         aircraft_task(CAP),
      	aircraft_task(Escort),
       	aircraft_task(FighterSweep),
 		aircraft_task(Intercept),
 		aircraft_task(Reconnaissance),
---[[  	aircraft_task(GroundAttack),
+  	aircraft_task(GroundAttack),
      	aircraft_task(CAS),
-		aircraft_task(AFAC),
-	    aircraft_task(RunwayAttack),
-		aircraft_task(AntishipStrike),
--]]
+--      aircraft_task(AFAC),
+--	aircraft_task(RunwayAttack),
+  	aircraft_task(AntishipStrike),
     },	
-	DefaultTask = aircraft_task(CAP),
+	DefaultTask = aircraft_task(FighterSweep),
 
 	
 	
