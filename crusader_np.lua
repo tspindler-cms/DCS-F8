@@ -374,7 +374,7 @@ Guns = {
 	
 
 	
-		Pylons =     {
+Pylons =     {
          pylon(1, 0, 1.2, 2.50, -1.60,
             {
                 use_full_connector_position = false,connector = "pylon_1",
