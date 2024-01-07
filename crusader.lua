@@ -726,4 +726,12 @@ SFM_Data = {
 	},
 }
 
+-- Overwing vapor effect by Toan -------------------------------------------------------------------
+effects_presets = {
+	{effect = "OVERWING_VAPOR", file = current_mod_path.."/Effects/crusader_overwingVapor.lua"},
+
+	-- you must create a folder Effects in the F-8 Mod folder ---------------------------------------
+	-- inside the Effects folder copy the crusader_overwingVapor.lua, by Toan, 05-01-2024 --------
+},  -- end of Overwing vapor effect -----------------------------------------------------------------
+
 add_aircraft(crusader)
