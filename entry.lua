@@ -44,7 +44,7 @@ InputProfiles =
 ----------------------------------------------------------------------------------------
 mount_vfs_model_path	(current_mod_path.."/Shapes")
 mount_vfs_liveries_path (current_mod_path.."/Liveries")
-mount_vfs_texture_path  (current_mod_path.."/Textures/Avionics")
+mount_vfs_texture_path  (current_mod_path.."/Textures/f8_pilot")
 mount_vfs_texture_path  (current_mod_path.."/Textures/crusader")
 
 -------------------------------------------------------------------------------------

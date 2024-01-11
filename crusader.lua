@@ -450,7 +450,7 @@ Pylons = {
                         use_full_connector_position = false,connector = "pylon_7",
             },
             {
-                        { CLSID = "f8_pilot" }, --f8_pilot1
+                        { CLSID = "f8_pilot", attach_point_position = {0.0, 0.0, 0} }, --f8_pilot1
 
             }
         ),
@@ -595,6 +595,7 @@ SFM_Data = {
 	},
 	
 	
+	--[[
 	--damage , index meaning see in  Scripts\Aircrafts\_Common\Damage.lua
 	Damage = {
 				[0] = {critical_damage = 5, args = {82}},
@@ -625,6 +626,7 @@ SFM_Data = {
 				[84]	= {critical_damage = 3, args = {136}}, -- left wheel                                  
 				[85]	= {critical_damage = 3, args = {135}}, -- right wheel
 	},
+	]]
 	
 	DamageParts = 
 	{  
