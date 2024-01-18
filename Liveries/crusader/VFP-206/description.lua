@@ -1,7 +1,7 @@
 livery = {
 
 
-    {"fuselage",        0, "F8-CRUSADER VFP-206 DRAFT.dds" ,false},
+    {"fuselage",        0, "VFP-206 DRAFT.dds" ,false},
     
 
 
