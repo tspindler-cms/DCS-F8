@@ -360,7 +360,7 @@ Pylons = {
                         { CLSID = "{BRU33_2X_MK-82}" },
                         { CLSID = "{BRU33_2X_MK-82_Snakeye}" },
 						{ CLSID = "{F3EFE0AB-E91A-42D8-9CA2-B63C91ED570A}"},--single Zuni
-						{ CLSID = "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}" },--Walleye
+						-- { CLSID = "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}" },--Walleye
 						{ CLSID = "{BRU-42_2*Mk-82SNAKEYE_LEFT}" },-- 2 ea MK82 SE on TER
 						{ CLSID = "{BRU-42_2*Mk-82_LEFT}" },--2 ea MK82 on TER
 						{ CLSID = "{SB_F8_BRU_41A_M82_4 Lt}" },--4 each MK82 on MER  needs weapons declaration at end of this lua
@@ -379,7 +379,7 @@ Pylons = {
                                 --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.4,  0.2, 0.0}}, --AIM-9M
                                 { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
                                 { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
-                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
+                                -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},
                 }
         ),
@@ -389,9 +389,10 @@ Pylons = {
                 },
                 {
                                 --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9M
+								{ CLSID = "{LAU-33A}",attach_point_position = {-0.4,  0.0, 0.0}}, --LAU-33A
                                 { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
                                 { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
-                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
+                                -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},  
                 }
         ),
@@ -401,9 +402,10 @@ Pylons = {
                 },
                 {
                                 --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9M
+								{ CLSID = "{LAU-33A}",attach_point_position = {-0.4,  0.0, 0.0}}, --LAU-33A
                                 { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
                                 { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
-                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
+                                -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},
                 }
         ),
@@ -415,7 +417,7 @@ Pylons = {
                                 --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.0,  0.2, 0.0}}, --AIM-9M
                                 { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
                                 { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
-                                { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
+                                -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},
                 }
         ),
@@ -434,7 +436,7 @@ Pylons = {
 					{ CLSID = "{BRU33_2X_MK-82}" },
 					{ CLSID = "{BRU33_2X_MK-82_Snakeye}" },
 					{ CLSID = "{F3EFE0AB-E91A-42D8-9CA2-B63C91ED570A}"},--single Zuni
-					{ CLSID = "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}" },--Walleye
+					-- { CLSID = "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}" },--Walleye
 					{ CLSID = "{BRU-42_2*Mk-82SNAKEYE_RIGHT}" },-- 2 ea MK82 SE on TER
 					{ CLSID = "{BRU-42_2*Mk-82_RIGHT}" },--2 ea MK82 on TER
 					{ CLSID = "{SB_F8_BRU_41A_M82_4 Rt}" },--4 each MK82 on MER  needs weapons declaration at end of this lua
@@ -593,40 +595,6 @@ SFM_Data = {
 	[61] = {critical_damage = 2,  args = {147}},--FUEL_TANK_F
 	[82] = {critical_damage = 2,  args = {152}},--FUSELAGE_BOTTOM
 	},
-	
-	
-	--[[
-	--damage , index meaning see in  Scripts\Aircrafts\_Common\Damage.lua
-	Damage = {
-				[0] = {critical_damage = 5, args = {82}},
-				[3] = {critical_damage = 10, args = {65}},
-				[8] = {critical_damage = 10},
-				[11] = {critical_damage = 3},
-				[12] = {critical_damage = 3},
-				[15] = {critical_damage = 10},
-				[16] = {critical_damage = 10},
-				[17] = {critical_damage = 3},
-				[18] = {critical_damage = 3},
-				[25] = {critical_damage = 5, args = {53}},
-				[26] = {critical_damage = 5, args = {54}},
-				[35] = {critical_damage = 10, args = {67}, deps_cells = {25, 37}},
-				[36] = {critical_damage = 10, args = {68}, deps_cells = {26, 38}},
-				[37] = {critical_damage = 20, args = {55}},
-				[38] = {critical_damage = 20, args = {56}},
-				[43] = {critical_damage = 20, args = {61}, deps_cells = {53}},
-				[44] = {critical_damage = 20, args = {62}, deps_cells = {54}},
-				[47] = {critical_damage = 5, args = {63}, deps_cells = {51}},
-				[48] = {critical_damage = 5, args = {64}, deps_cells = {52}},
-				[51] = {critical_damage = 20, args = {59}},
-				[52] = {critical_damage = 20, args = {60}},
-				[53] = {critical_damage = 30, args = {57}},
-				[54] = {critical_damage = 2, args = {58}},
-				[55] = {critical_damage = 5, args = {81}},
-				[83]	= {critical_damage = 3, args = {134}}, -- nose wheel                                  
-				[84]	= {critical_damage = 3, args = {136}}, -- left wheel                                  
-				[85]	= {critical_damage = 3, args = {135}}, -- right wheel
-	},
-	]]
 	
 	DamageParts = 
 	{  
