@@ -460,7 +460,7 @@ Pylons = {
                         use_full_connector_position = false,connector = "pylon_7",
             },
             {
-                        { CLSID = "f8_pilot", attach_point_position = {0.0, 0.0, 0} }, --f8_pilot1
+                        -- unused for now, might be good for sensors later on -- TeTeT 2024-02-21
 
             }
         ),
