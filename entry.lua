@@ -16,7 +16,7 @@ Skins	=
 	{
 		{
 		    name	= _("crusader"),
-			dir		= "Theme"
+			dir		= "Skins/1"
 		},
 	},
 Missions =
