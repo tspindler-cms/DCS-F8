@@ -385,34 +385,40 @@ Pylons = {
                 },
                 {
                                 --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.4,  0.2, 0.0}}, --AIM-9M
-                                { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
-                                { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {0.7,  0.05, 0.0}}, --AIM-9B
+								{ CLSID = "{F8_AIM-9C}" ,attach_point_position = {0.7,  0.05, 0.0}}, --AIM-9C
+								{ CLSID = "{F8_AIM-9D}" ,attach_point_position = {0.7,  0.11, 0.0}}, --AIM-9D
+                                { CLSID = "{AIM-9L}" ,attach_point_position = {0.7,  0.05, 0.0}}, --AIM-9L
                                 -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},
                 }
         ),
         pylon(3, 0, 1.2, 1.34, 1.75,
                 {
-                        use_full_connector_position = false,connector = "pylon_6",
+                        use_full_connector_position = false,connector = "pylon_4",
                 },
                 {
                                 --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.2,  0.05, 0.0}}, --AIM-9M
-								{ CLSID = "{LAU-33A}",attach_point_position = {-0.4,  0.0, 0.0}}, --LAU-33A
-                                { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
-                                { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
+								{ CLSID = "{LAU-33A}",attach_point_position = {-0.3,  0.0, 0.0}}, --LAU-33A
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {-0.3,  -0.05, 0.0}}, --AIM-9B
+								{ CLSID = "{F8_AIM-9C}" ,attach_point_position = {-0.3,  -0.05, 0.0}}, --AIM-9C
+								{ CLSID = "{F8_AIM-9D}" ,attach_point_position = {-0.3,  0.05, 0.0}}, --AIM-9D
+                                { CLSID = "{AIM-9L}" ,attach_point_position = {-0.3,  -0.05, 0.0}}, --AIM-9L
                                 -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},  
                 }
         ),
         pylon(4, 0, 1.2, 1.34, 1.60,
                 {
-                        use_full_connector_position = false,connector = "pylon_4",
+                        use_full_connector_position = false,connector = "pylon_6",
                 },
                 {
                                 --{ CLSID = "{AIM-9M-ON-ADAPTER}" ,attach_point_position = {-0.4,  0.05, 0.0}}, --AIM-9M
-								{ CLSID = "{LAU-33A}",attach_point_position = {-0.4,  0.0, 0.0}}, --LAU-33A
-                                { CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
-                                { CLSID = "{AIM-9J}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9J
+								{ CLSID = "{LAU-33A}",attach_point_position = {-0.5,  0.0, 0.0}}, --LAU-33A
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {-0.5,  -0.05, 0.0}}, --AIM-9B
+								{ CLSID = "{F8_AIM-9C}" ,attach_point_position = {-0.5,  -0.05, 0.0}}, --AIM-9C
+								{ CLSID = "{F8_AIM-9D}" ,attach_point_position = {-0.5,  0.05, 0.0}}, --AIM-9D
+                                { CLSID = "{AIM-9L}" ,attach_point_position = {-0.5,  -0.05, 0.0}}, --AIM-9L
                                 -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},
                 }
@@ -423,8 +429,10 @@ Pylons = {
                 },
                 {
                                 --{ CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}" ,attach_point_position = {0.0,  0.2, 0.0}}, --AIM-9M
-                                { CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
-                                { CLSID = "{AIM-9J}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9J
+                                { CLSID = "{AIM-9B}" ,attach_point_position = {0.2,  0.05, 0.0}}, --AIM-9B
+								{ CLSID = "{F8_AIM-9C}" ,attach_point_position = {0.2,  0.05, 0.0}}, --AIM-9C
+								{ CLSID = "{F8_AIM-9D}" ,attach_point_position = {0.2,  0.11, 0.0}}, --AIM-9D
+                                { CLSID = "{AIM-9L}" ,attach_point_position = {0.2,  0.05, 0.0}}, --AIM-9L
                                 -- { CLSID = "{R550_Magic_1}" ,attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
                         --  { CLSID = "{HVARx2}"},
                 }

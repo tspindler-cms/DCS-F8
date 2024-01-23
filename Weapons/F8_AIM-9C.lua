@@ -265,7 +265,7 @@ declare_loadout({
 	CLSID			= 	"{F8_AIM-9C}",
 	Picture			=	"aim9p.png",
 	wsTypeOfWeapon	=	F8_AIM9C.wsTypeOfWeapon,
-	displayName		=	_("AIM-9C SARH Sidewinder"),
+	displayName		=	_("AIM-9C Sidewinder SARH AAM"),
 	attribute		=   F8_AIM9C.wsTypeOfWeapon,
 	Count			=	1,
 	Weight			=	66,
