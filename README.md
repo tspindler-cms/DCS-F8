@@ -8,7 +8,7 @@ Based on a VSN plane, kudos to the team!
 
 TeTeT
 
-# F8 Crusader Liveries for CV-31 USS Bon Homme Richard by seabat
+# F8 Crusader Liveries for CV-31 USS Bon Homme Richard and more by seabat
 
 - Based on two squadrons assigned to Carrier Air Wing 5 on USS Bon Homme Richard during 1970 off the coast of Vietnam.
 - Markings are generally historical.
