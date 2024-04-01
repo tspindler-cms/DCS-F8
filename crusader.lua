@@ -1,6 +1,6 @@
 crusader =  {
         
-	Name 				= 'crusader',
+	Name 				= 'vwv_crusader',
 	DisplayName			= _('F-8E Crusader'),
 	DisplayNameShort    = _('F-8E'),
 	HumanCockpit 		= true,
@@ -693,6 +693,6 @@ effects_presets = {
 
 	-- you must create a folder Effects in the F-8 Mod folder ---------------------------------------
 	-- inside the Effects folder copy the crusader_overwingVapor.lua, by Toan, 05-01-2024 --------
-},  -- end of Overwing vapor effect -----------------------------------------------------------------
+}  -- end of Overwing vapor effect -----------------------------------------------------------------
 
 add_aircraft(crusader)

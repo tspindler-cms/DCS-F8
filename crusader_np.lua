@@ -1,6 +1,5 @@
-crusader_np =  {
-        
-	Name 				=   'crusader_np',
+local crusader_np =  {
+	Name 				= 'vwv_crusader_np',
 	DisplayName			= _('F-8E(FN) Crusader'),
 	DisplayNameShort    = _('F-8E(FN)'),
 	HumanCockpit 		= true,
@@ -8,8 +7,7 @@ crusader_np =  {
 	Picture 			= "crusader_np.png",
 	Rate 				= 40, -- RewardPoint in Multiplayer
 	Shape 				= "crusader_np",
-	
-	shape_table_data 	= 
+	shape_table_data 	=
 	{
 		{
 			file  	 	= 'crusader_np';
@@ -20,7 +18,7 @@ crusader_np =  {
 			username	= 'crusader_np';
 			index    	=  WSTYPE_PLACEHOLDER;
 			classname   = "lLandPlane";
-	    		positioning = "BYNORMAL";
+			positioning = "BYNORMAL";
 		},
 		{
 			name  = "crusader-oblomok";
@@ -56,8 +54,8 @@ crusader_np =  {
 	bank_angle_max 				= 75, -- Max bank angle (for AI)
 	has_afteburner				= true,
 	has_speedbrake				= true,
-	radar_can_see_ground		= true,	
-		
+	radar_can_see_ground		= true,
+
 	nose_gear_pos =         {0.96, -2.100,  0},     ----1.990
 	nose_gear_wheel_diameter        =       0.566,
 	nose_gear_amortizer_direct_stroke        =   1.58 - 1.40, --0.220,
@@ -70,10 +68,9 @@ crusader_np =  {
 	main_gear_amortizer_reversal_stroke      = -0.01,
 	main_gear_amortizer_normal_weight_stroke =  0.0,
 
-	wing_tip_pos =          {-5.214,-0.7, 5.35},-- wingtip coords for visual effects  -- was -10.214, by Toan, 28-12		
+	wing_tip_pos =          {-5.214,-0.7, 5.35},-- wingtip coords for visual effects  -- was -10.214, by Toan, 28-12
 
-    AOA_take_off	=	0.16,
-	stores_number	=	10,		
+	stores_number	=	7,
 	tand_gear_max	=	-5.54,   -- 83° tangent maximum yaw angle of front wheel, by Toan, 15-01-2024
 	tanker_type	=	2,
 	wing_area	=	34.8,
@@ -86,17 +83,13 @@ crusader_np =  {
 	flaps_maneuver	=	1.0,
 	range	=	2372,
 	crew_size	=	1,
-	RCS	=	4.0,			
+	RCS	=	4.0,
 	IR_emission_coeff	=	0.6,
 	IR_emission_coeff_ab	=	2.5,
-	engines_count	=	1,
-	nose_gear_wheel_diameter	=	0.566,
-	main_gear_wheel_diameter	=	0.778,
-			
-	-- Overwing vapor effect by Toan
+
 	effects_presets = {
 		{effect = "OVERWING_VAPOR", file = current_mod_path.."/Effects/crusader_overwingVapor.lua"},
-		
+
 		-- you must create a folder Effects in the F-8 Mod folder ---------------------------------------
 		-- inside the Effects folder copy the crusader_overwingVapor.lua, by Toan, 05-01-2024 -----------
 		-- also, you must put in the Shapes folder the crusader_vapor.owv file, by Toan, 06-01-2024 -----
@@ -104,22 +97,22 @@ crusader_np =  {
 
     engines_count    = 1, -- added by Toan, otherwise smoke doesn't work, 27-12-2023 ----------------------
     engines_nozzles = {
-        [1] = 
+        [1] =
         {
             pos            = {-9.2,    -0.5,    0}, -- nozzle coords -- was -0.8, by Toan, 27-12-2023 ---------
             elevation           = 0, -- AFB cone elevation -------- was -0.1, by Toan, 29-12-2023 ---------
             diameter            = 0.6, -- AFB cone diameter ------- was 0.6, by Toan, 03-01-2024 ----------
             exhaust_length_ab   = 4.0, -- lenght in m ------------- was 4, by Toan, 03-01-2024 ------------
             exhaust_length_ab_K = 0.707, -- AB animation
-            smokiness_level     = 0.5, ---------------------------- update by Toan, 27-12-2023 ------------ 
+            smokiness_level     = 0.5, ---------------------------- update by Toan, 27-12-2023 ------------
             afterburner_circles_count = 3, ------------------------ 0 if no AB, by Toan, 01-01-2024 -------
-        }, -- end of [1]        
-    }, -- end of engines_nozzles 
-	
-	
-	crew_members = 
+        }, -- end of [1]
+    }, -- end of engines_nozzles
+
+
+	crew_members =
 	{
-		[1] = 
+		[1] =
 		{
 			ejection_seat_name = "pilot_f86_seat",
 			drop_canopy_name   = 0,
@@ -131,16 +124,11 @@ crusader_np =  {
 		}, -- end of [1]
 	}, -- end of crew_members
 
-	
-		
-		
 	brakeshute_name	=	0,
 	is_tanker	=	false,
 	air_refuel_receptacle_pos = 	{0.75,	-0.25,	-0.3},	---?
-		
-		
-		
-	fires_pos = 
+
+	fires_pos =
 	{
 		[1] = 	{-0.40,		-0.46,	 0.0},		-- Fuselage					10 - fuselage right
 		[2] = 	{-1.114,	-0.29,	 0.901},	-- Wing inner Right
@@ -152,11 +140,11 @@ crusader_np =  {
 		[8] = 	{0.0,		 0.0,	 0.0},		-- Engine (inner Right)
 		[9] = 	{-7.75,		 0.3,	 0.0},		-- Engine (inner Left)
 	}, -- end of fires_pos
-	
+
 	Countermeasures = {
 		ECM = "AN/ALQ-126"
 	},
-	
+
 	passivCounterm = {
 		CMDS_Edit = true,
 		SingleChargeTotal = 240,
@@ -165,52 +153,51 @@ crusader_np =  {
 	},
 
 	chaff_flare_dispenser 	= {
-		{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, -0.878}, }, -- Flares 
-		{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, 0.878}, }, -- Flares 
+		{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, -0.878}, }, -- Flares
+		{ dir =  {0, -1, 0}, pos =  {-1.1850,  -1.72, 0.878}, }, -- Flares
 	},
 
 	mechanimations = {
 		FoldableWings = {
 			{Transition = {"Retract", "Extend"}, Sequence = {{C = {{"Arg", 8, "to", 0.0, "in", 5.0}}}}, Flags = {"Reversible"}},
 			{Transition = {"Extend", "Retract"}, Sequence = {{C = {{"Arg", 8, "to", 1.0, "in", 15.0}}}}, Flags = {"Reversible", "StepsBackwards"}},
-			
+		}
 	},
-          
-	LandRWCategories = 
+
+	LandRWCategories =
         {
-        [1] = 
+        [1] =
         {
 			Name = "AircraftCarrier",
         },
-        [2] = 
+        [2] =
         {
             Name = "AircraftCarrier With Catapult",
-        }, 
-        [3] = 
+        },
+        [3] =
         {
             Name = "AircraftCarrier With Tramplin",
-        }, 
+        },
     }, -- end of LandRWCategories
-    TakeOffRWCategories = 
+    TakeOffRWCategories =
         {
-        [1] = 
+        [1] =
         {
 			Name = "AircraftCarrier",
         },
-        [2] = 
+        [2] =
         {
             Name = "AircraftCarrier With Catapult",
-        }, 
-        [3] = 
+        },
+        [3] =
         {
             Name = "AircraftCarrier With Tramplin",
-        }, 
+        },
     }, -- end of TakeOffRWCategories
 
-			
 	--sensors
 	detection_range_max		 = 40,
-	radar_can_see_ground 	 = true, 
+	radar_can_see_ground 	 = true,
 	CanopyGeometry = {
 		azimuth = {-145.0, 145.0},
 		elevation = {-50.0, 90.0}
@@ -236,7 +223,7 @@ crusader_np =  {
 			{ id = 'rws',  		label = _('RWS'), 		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 			{ id = 'ecm',   	label = _('ECM'), 		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 			{ id = 'hud',  		label = _('HUD'), 		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-			{ id = 'mfd',  		label = _('MFD'), 		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },		
+			{ id = 'mfd',  		label = _('MFD'), 		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 	},
 	HumanRadio = {
 		frequency = 127.5,  -- Radio Freq
@@ -245,7 +232,7 @@ crusader_np =  {
 		maxFrequency = 156.000,
 		modulation = MODULATION_AM
 	},
-	
+
 	-- Guns from Beldin
 	Guns = {
 		gun_mount("M_39",
@@ -311,13 +298,13 @@ crusader_np =  {
 				{name = "FireEffect", arg 				= 433, duration  = 0.02, attenuation = 2 , light_pos = {0.5,0,0}},
 				{name = "SmokeEffect",gas_deflector_arg = 328, add_speed = {0,  3, 10}},
 			},
-		})			
+		})
 	},
 	ammo_type_default = 2, -- interface to set desired ammunition mix in ME (DCSCORE-1104)
-	ammo_type ={_("HEI High Explosive Incendiary"),
-				_("CM Combat Mix"),
-				_("AP Armor Piercing"),
-				_("TP Target Practice"),
+	ammo_type = {("HEI High Explosive Incendiary"),
+				("CM Combat Mix"),
+				("AP Armor Piercing"),
+				("TP Target Practice"),
 	},
 
 	Pylons = {
@@ -337,8 +324,6 @@ crusader_np =  {
 					{ CLSID = "{AIM-9B}" ,attach_point_position 	 = {0.5,  0.05, 0.0}}, --AIM-9B
 					{ CLSID = "{AIM-9J}" ,attach_point_position	 = {0.5,  0.05, 0.0}}, --AIM-9J
 					{ CLSID = "{R550_Magic_1}",attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
-					
-				
 			}
 		),
 		pylon(3, 0, 1.2, 1.34, 1.75,
@@ -349,9 +334,6 @@ crusader_np =  {
 					{ CLSID = "{AIM-9B}" ,attach_point_position 	 = {-0.4,  -0.05, 0.0}}, --AIM-9B
 					{ CLSID = "{AIM-9J}" ,attach_point_position 	 = {-0.4,  -0.05, 0.0}}, --AIM-9J
 					{ CLSID = "{R550_Magic_1}",attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
-					
-	
-				 
 			}
 		),
 		pylon(4, 0, 1.2, 1.34, 1.60,
@@ -362,8 +344,6 @@ crusader_np =  {
 					{ CLSID = "{AIM-9B}" ,attach_point_position 	 = {-0.4,  -0.05, 0.0}}, --AIM-9B
 					{ CLSID = "{AIM-9J}" ,attach_point_position 	 = {-0.4,  -0.05, 0.0}}, --AIM-9J
 					{ CLSID = "{R550_Magic_1}",attach_point_position = {-0.4,  -0.05, 0.0}}, --Magic 1
-					
-				
 			}
 		),
 		pylon(5, 0, 1.2, 1.34, 1.75,
@@ -374,8 +354,6 @@ crusader_np =  {
 					{ CLSID = "{AIM-9B}" ,attach_point_position 	 = {0.5,  0.05, 0.0}}, --AIM-9B
 					{ CLSID = "{AIM-9J}" ,attach_point_position 	 = {0.5,  0.05, 0.0}}, --AIM-9J
 					{ CLSID = "{R550_Magic_1}",attach_point_position = {0.5,  0.05, 0.0}}, --Magic 1
-					
-				
 			}
 		),
 		pylon(6, 0, 1.2, 1.34, 1.60,
@@ -383,23 +361,21 @@ crusader_np =  {
 				use_full_connector_position = false,connector = "pylon_2",
 			},
 			{
-				{ CLSID = "<CLEAN>", arg_value = 1 }, -- CLEAN --			  
+				{ CLSID = "<CLEAN>", arg_value = 1 }, -- CLEAN --
 			}
-		),  
+		),
 		pylon(7, 0, 1.2, 1.34, 1.60, --?????
 			{
 				use_full_connector_position = false,connector = "pylon_7",
 			},
 			{
-	
 			}
 		),
 	},
-	
 	Tasks = {
         aircraft_task(CAP),
-     	aircraft_task(Escort),
-      	aircraft_task(FighterSweep),
+		aircraft_task(Escort),
+		aircraft_task(FighterSweep),
 		aircraft_task(Intercept),
 		aircraft_task(Reconnaissance),
 --  	aircraft_task(GroundAttack),
@@ -407,13 +383,13 @@ crusader_np =  {
 --      aircraft_task(AFAC),
 --	    aircraft_task(RunwayAttack),
 --  	aircraft_task(AntishipStrike),
-    },	
+    },
 	DefaultTask = aircraft_task(CAP),
 	Countries = {"France"},
-	
+
 	-- based on MiG-19 SFM
 	SFM_Data =
-	{		
+	{
 		aerodynamics =
 		{
 			Cy0	        =   0, -- zero AoA lift coefficient*
@@ -428,7 +404,7 @@ crusader_np =  {
 			cx_brk	    =   0.040, -- coefficient, drag, breaks
 			-- Increased Cx0 by 0.01
 			-- Reduced Cya by 0.005
-			table_data  = 
+			table_data  =
 			{
                 --M     Cx0*	 	Cya*	B2		B4	 	Omxmax	Aldop*	Cymax*
                 {0.00,	0.03400,	0.0620,	0.125,	0.070,	0.3500,	22.0,	1.100},
@@ -456,7 +432,7 @@ crusader_np =  {
 			-- Aldop - Alfadop Max AOA at current M - departure threshold
 			-- Cymax - Coefficient, lift, maximum possible (ignores other calculations if current Cy > Cymax)
 		}, -- end of aerodynamics
-		
+
 		engine =
 		{
 			Nmg		=	50,		-- RPM at idle
@@ -472,7 +448,7 @@ crusader_np =  {
 			dpdh_m	=	1600,	-- altitude coefficient for max thrust
 			dpdh_f	=	2500,	-- altitude coefficient for AB thrust
 			-- +15k Pmax and Pfor
-			table_data = 
+			table_data =
 			{         --   M    Pmax    Pfor
 				[1] = 	{0.00,	56141,	66049},
 				[2] = 	{0.1,	54118,	64639},
@@ -493,7 +469,7 @@ crusader_np =  {
 			}, -- end of table_data
 		}, -- end of engine
 	},-- end of SFM_Data
-	
+
 	Damage = {
 		[0] = {critical_damage = 5, args = {82}},
 		[3] = {critical_damage = 10, args = {65}},
@@ -523,119 +499,118 @@ crusader_np =  {
 		[84]    = {critical_damage = 3, args = {136}}, -- left wheel
 		[85]    = {critical_damage = 3, args = {135}}, -- right wheel
     },
-	
-	DamageParts = 
-	{  
-		[1] = "crusader-oblomok", 
-		[2] = "crusader-oblomok", 
-		
-	},
-	
-	lights_data = {
-	typename = "collection",
-	lights = {
-    
-	[1] = { typename = "collection",
-							lights = {-- Landing light
-									  {typename = "spotlight",
-									   connector = "MAIN_SPOT_PTR_02",
-									   argument = 209,
-									   dir_correction = {elevation = math.rad(-1)}
-									  },
-									  {-- Landing/Taxi light
-									   typename = "spotlight",
-									   connector = "MAIN_SPOT_PTR_01",
-									   argument = 208,
-									   dir_correction = {elevation = math.rad(3)}
-									  }
-									 }
-						},
-    [2]	= {	typename = "collection",
-								lights = {-- Left Position Light (red)
-								{typename = "omnilight",
-								 connector = "BANO_1",
-								 color = {0.99, 0.11, 0.3},
-								 pos_correction  = {0.1, 0, -0.2},
-								 argument  = 190
-								},
-								 -- Right Position Light (green)
-								{typename = "omnilight",
-								connector = "BANO_2",
-								color = {0, 0.894, 0.6},
-								pos_correction = {0.1, 0, 0.2},
-								argument  = 191
-								},
-								-- Tail Position Light (white)
-								{typename = "omnilight",
-								connector = "BANO_0",
-								color = {1, 1, 1},
-								pos_correction  = {0, 0, 0},
-								argument  = 192
-								}}
-							},
 
-	[3]	= {typename = "collection",
-			lights = {
-						{typename = "collection",
-						lights = {{
-								-- Right Nacelle Floodlight
-								typename = "spotlight",
-								position  = {0.5, 1.2, 0},
-								color = {1.0, 1.0, 1.0},
-								intensity_max = 0.0,
-								angle_max = 0.45,
-								direction = {azimuth = math.rad(150), elevation = math.rad(5)},
-								dont_change_color = false,
-								angle_change_rate = 0
-							   },
-							   {
-								-- Left Nacelle Floodlight
-								typename = "spotlight",
-								position  = {0.5, 1.2, 0},
-								color = {1.0, 1.0, 1.0},
-								intensity_max = 0.0,
-								angle_max = 0.45,
-								direction = {azimuth = math.rad(-150), elevation = math.rad(5)},
-								dont_change_color = false,
-								angle_change_rate = 0
-							   },
-							   {typename  = "argumentlight", argument = 212},
+	DamageParts =
+	{
+		[1] = "crusader-oblomok",
+		[2] = "crusader-oblomok",
+	},
+
+	lights_data = {
+		typename = "collection",
+		lights = {
+
+		[1] = { typename = "collection",
+								lights = {-- Landing light
+										{typename = "spotlight",
+										connector = "MAIN_SPOT_PTR_02",
+										argument = 209,
+										dir_correction = {elevation = math.rad(-1)}
+										},
+										{-- Landing/Taxi light
+										typename = "spotlight",
+										connector = "MAIN_SPOT_PTR_01",
+										argument = 208,
+										dir_correction = {elevation = math.rad(3)}
+										}
+										}
+							},
+		[2]	= {	typename = "collection",
+									lights = {-- Left Position Light (red)
+									{typename = "omnilight",
+									connector = "BANO_1",
+									color = {0.99, 0.11, 0.3},
+									pos_correction  = {0.1, 0, -0.2},
+									argument  = 190
+									},
+									-- Right Position Light (green)
+									{typename = "omnilight",
+									connector = "BANO_2",
+									color = {0, 0.894, 0.6},
+									pos_correction = {0.1, 0, 0.2},
+									argument  = 191
+									},
+									-- Tail Position Light (white)
+									{typename = "omnilight",
+									connector = "BANO_0",
+									color = {1, 1, 1},
+									pos_correction  = {0, 0, 0},
+									argument  = 192
+									}}
+								},
+
+		[3]	= {typename = "collection",
+				lights = {
+							{typename = "collection",
+							lights = {{
+									-- Right Nacelle Floodlight
+									typename = "spotlight",
+									position  = {0.5, 1.2, 0},
+									color = {1.0, 1.0, 1.0},
+									intensity_max = 0.0,
+									angle_max = 0.45,
+									direction = {azimuth = math.rad(150), elevation = math.rad(5)},
+									dont_change_color = false,
+									angle_change_rate = 0
+								},
+								{
+									-- Left Nacelle Floodlight
+									typename = "spotlight",
+									position  = {0.5, 1.2, 0},
+									color = {1.0, 1.0, 1.0},
+									intensity_max = 0.0,
+									angle_max = 0.45,
+									direction = {azimuth = math.rad(-150), elevation = math.rad(5)},
+									dont_change_color = false,
+									angle_change_rate = 0
+								},
+								{typename  = "argumentlight", argument = 212},
+							},
 						},
-					},
-					{typename = "collection",
-						lights = {{
-								-- Left Nose Floodlight
-								typename  = "spotlight",
-								position  = {0, -0.3, -5.80},
-								color = {1.0, 1.0, 1.0},
-								intensity_max = 0.0, angle_max = 0.45,
-								direction = {azimuth = math.rad(45)},
-								argument = 211,
-								dont_change_color = false,
-								angle_change_rate = 0
-							   },
-							   {
-								-- Right Nose Floodlight
-								typename = "spotlight",
-								position  = {0, -0.3, 5.80},
-								color = {1.0, 1.0, 1.0},
-								intensity_max = 0.0,
-								angle_max = 0.45,
-								direction = {azimuth = math.rad(-45)},
-								argument = 210,
-								dont_change_color = false,
-								angle_change_rate = 0
-							   }
+						{typename = "collection",
+							lights = {{
+									-- Left Nose Floodlight
+									typename  = "spotlight",
+									position  = {0, -0.3, -5.80},
+									color = {1.0, 1.0, 1.0},
+									intensity_max = 0.0, angle_max = 0.45,
+									direction = {azimuth = math.rad(45)},
+									argument = 211,
+									dont_change_color = false,
+									angle_change_rate = 0
+								},
+								{
+									-- Right Nose Floodlight
+									typename = "spotlight",
+									position  = {0, -0.3, 5.80},
+									color = {1.0, 1.0, 1.0},
+									intensity_max = 0.0,
+									angle_max = 0.45,
+									direction = {azimuth = math.rad(-45)},
+									argument = 210,
+									dont_change_color = false,
+									angle_change_rate = 0
+								}
+							}
+						},
+						-- UARRSI light
+						{
+							typename = "omnilight", position  = {6.5, 0.4, 0}, color = {6, 6, 2}
 						}
 					},
-					-- UARRSI light
-					{
-						typename = "omnilight", position  = {6.5, 0.4, 0}, color = {6, 6, 2}
-					}
-				  },
-			}
+				}
 		}
-	},
+	}
 }
 
 -- Overwing vapor effect by Toan -------------------------------------------------------------------
@@ -644,6 +619,6 @@ effects_presets = {
 
 	-- you must create a folder Effects in the F-8 Mod folder ---------------------------------------
 	-- inside the Effects folder copy the crusader_overwingVapor.lua, by Toan, 05-01-2024 --------
-},  -- end of Overwing vapor effect -----------------------------------------------------------------
+}  -- end of Overwing vapor effect -----------------------------------------------------------------
 
 add_aircraft(crusader_np)
