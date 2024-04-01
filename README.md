@@ -1,4 +1,6 @@
-# General Information
+# General Information F-8 mod for DCS
+
+This mod is released under the Creative Commons Attribution-NonCommercial-ShareAlike license, see LICENSE.md for details
 
 A mod of the F-8 Crusader for DCS, thanks to Hawkeye60, Mario and Spino and the VSN team.
 
