@@ -1,5 +1,3 @@
-
-
 Damage = {
 
 	[0] =  {critical_damage = 15, args = {296}},  -- pilot area
@@ -13,10 +11,7 @@ Damage = {
 	[8] =  {critical_damage = 20, args = {152}},  -- fuselage bottom
 	[9] =  {critical_damage = 15, args = {154}},  -- cabin left
 	[10] =  {critical_damage = 15, args = {153}}, -- cabin right
-	[11] =  {critical_damage = 20, args = {156}}, -- under tail	
+	[11] =  {critical_damage = 20, args = {156}}, -- under tail
 	[12] =  {critical_damage = 15, args = {157}}, -- fuselage rear left
 	[13] =  {critical_damage = 15, args = {158}}, -- fuselage rear right
-	
-	},	
-
-
+	}
