@@ -5,10 +5,5 @@ model={
 		{"crusader.edm",20000.00000};
 		{"crusader_lod03.edm",50000.000000};
 	};
-         collision_shell="crusader_collision.edm";
-
+    collision_shell="crusader_collision.edm";
 }
-
-
-
-

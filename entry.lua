@@ -50,13 +50,15 @@ mount_vfs_texture_path  (current_mod_path.."/Textures/crusader")
 
 dofile(current_mod_path.."/Weapons/F8_AIM-9C.lua")
 dofile(current_mod_path.."/Weapons/F8_AIM-9D.lua")
+dofile(current_mod_path.."/Weapons/bombs.lua")
+-- dofile(current_mod_path.."/Weapons/ammo.lua")
 dofile(current_mod_path.."/Views.lua")
 make_view_settings('crusader', ViewSettings, SnapViews)
-make_flyable('crusader'	, current_mod_path..'/Cockpit/A10A/', {nil, old = true}, current_mod_path..'/comm.lua/')
+make_flyable('crusader'	, current_mod_path..'/Cockpit/A10A/', {nil, old = 6}, current_mod_path..'/comm.lua')
 make_view_settings('crusader_np', ViewSettings, SnapViews)
-make_flyable('crusader_np'	, current_mod_path..'/Cockpit/A10A/', {nil,old = true}, current_mod_path..'/comm.lua/')
+make_flyable('crusader_np'	, current_mod_path..'/Cockpit/A10A/', {nil, old = 6}, current_mod_path..'/comm.lua')
 -------------------------------------------------------------------------------------
-
+dofile(current_mod_path..'/crusader_Damage.lua')
 dofile(current_mod_path..'/crusader.lua')
 dofile(current_mod_path..'/crusader_np.lua')
 -------------------------------------------------------------------------------------
