@@ -1,45 +1,43 @@
 self_ID = "tetet_crusader"
 declare_plugin(self_ID,
 {
-image     	 = "FC3.bmp",
-installed 	 = true, -- if false that will be place holder , or advertising
-dirName	  	 = current_mod_path,
-displayName  = _("crusader"),
+	image = "FC3.bmp",
+	installed = true, -- if false that will be place holder , or advertising
+	dirName = current_mod_path,
+	displayName = _("crusader"),
 
-fileMenuName = _("crusader"),
-update_id        = "crusader",
-version		 = "0.3.1",
-state		 = "installed",
--- info		 = _("Die Ling-Temco-Vought A-7 Corsair II ist ein einstrahliges Kampfflugzeug aus US-amerikanischer Produktion. Sie basierte auf der F-8 Crusader. Die A-7 war bei der US Navy und US Air Force im Dienst. Spaeter wurde sie von der Air National Guard bis 1998 eingesetzt. Das Modell uebernahmen auch Griechenland, Portugal (Einsatz bis 1999) und Thailand. In Griechenland sind A-7 bis heute bei der 336. Staffel des 116. Kampfgeschwaders in Araxos im Einsatz. Die Ausserdienststellung der A-7E war fuer Ende 2013 geplant, waehrend die TA-7C noch etwas laenger genutzt werden sollen."),
+	fileMenuName = _("crusader"),
+	update_id = "crusader",
+	version = "0.4.0",
+	state = "installed",
+	-- info		 = _("Die Ling-Temco-Vought A-7 Corsair II ist ein einstrahliges Kampfflugzeug aus US-amerikanischer Produktion. Sie basierte auf der F-8 Crusader. Die A-7 war bei der US Navy und US Air Force im Dienst. Spaeter wurde sie von der Air National Guard bis 1998 eingesetzt. Das Modell uebernahmen auch Griechenland, Portugal (Einsatz bis 1999) und Thailand. In Griechenland sind A-7 bis heute bei der 336. Staffel des 116. Kampfgeschwaders in Araxos im Einsatz. Die Ausserdienststellung der A-7E war fuer Ende 2013 geplant, waehrend die TA-7C noch etwas laenger genutzt werden sollen."),
 
-Skins	=
-	{
+	Skins	=
 		{
-		    name	= _("crusader"),
-			dir		= "Skins/1"
+			{
+				name	= _("crusader"),
+				dir		= "Skins/1"
+			},
 		},
-	},
-Missions =
-	{
+	Missions =
 		{
-			name		    = _("crusader"),
-			dir			    = "Missions",
-  		},
-	},
-LogBook =
-	{
-		{
-			name		= _("crusader"),
-			type		= "crusader",
+			{
+				name		    = _("crusader"),
+				dir			    = "Missions",
+			},
 		},
-	
-	},	
-		
-InputProfiles =
-	{
-		["crusader"] = current_mod_path .. '/Input/crusader',
-		["crusader_np"] = current_mod_path .. '/Input/crusader_np',
-	},
+	LogBook =
+		{
+			{
+				name		= _("crusader"),
+				type		= "crusader",
+			},
+		},
+	InputProfiles =
+		{
+			["crusader"] = current_mod_path .. '/Input/crusader',
+			["crusader_np"] = current_mod_path .. '/Input/crusader_np',
+		},
 })
 ----------------------------------------------------------------------------------------
 mount_vfs_model_path	(current_mod_path.."/Shapes")
