@@ -56,7 +56,6 @@ make_flyable('vwv_crusader'	, current_mod_path..'/Cockpit/A10A/', {nil, old = 6}
 -- make_view_settings('crusader_np', ViewSettings, SnapViews)
 -- make_flyable('crusader_np'	, current_mod_path..'/Cockpit/A10A/', {nil, old = 6}, current_mod_path..'/comm.lua')
 -------------------------------------------------------------------------------------
-dofile(current_mod_path..'/crusader_Damage.lua')
 dofile(current_mod_path..'/crusader.lua')
 dofile(current_mod_path..'/crusader_np.lua')
 -------------------------------------------------------------------------------------
