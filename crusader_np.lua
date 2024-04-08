@@ -470,31 +470,31 @@ local crusader_np =  {
 		}, -- end of engine
 	},-- end of SFM_Data
 
-		-- Blueprint taken from Damage.lua of ED, Fencer (Scripts/Aircraft/_Common/Damage.lua)
-	Damage  = verbose_to_dmg_properties({
+	-- Blueprint taken from Damage.lua of ED, Fencer (Scripts/Aircraft/_Common/Damage.lua)
+	Damage = verbose_to_dmg_properties({
 		["COCKPIT"]				= {critical_damage = 2,args =  { 65}},
 		["NOSE_CENTER"]			= {critical_damage = 3,args =  {146}},
-		-- ["NOSE_RIGHT_SIDE"] 	= {critical_damage = 3,args =  {147}},
-		-- ["NOSE_LEFT_SIDE"]		= {critical_damage = 3,args =  {150}},
-		-- ["NOSE_BOTTOM"]			= {critical_damage = 3,args =  {148}},
-		-- ["NOSE_TOP_SIDE"]		= {critical_damage = 3,args =  {147}},
+		["NOSE_RIGHT_SIDE"] 	= {critical_damage = 3,args =  {147}},
+		["NOSE_LEFT_SIDE"]		= {critical_damage = 3,args =  {150}},
+		["NOSE_BOTTOM"]			= {critical_damage = 3,args =  {148}},
+		["NOSE_TOP_SIDE"]		= {critical_damage = 3,args =  {147}},
 
 		["WING_L_OUT"]			= {critical_damage = 10,args =  {223},deps_cells = {"FLAP_L_IN","WING_L_PART_OUT"}},
-		-- ["WING_R_OUT"]			= {critical_damage = 10,args =  {213},deps_cells = {"FLAP_R_IN","WING_R_PART_OUT"}},
+		["WING_R_OUT"]			= {critical_damage = 10,args =  {213},deps_cells = {"FLAP_R_IN","WING_R_PART_OUT"}},
 		["WING_L_PART_OUT"]		= {critical_damage = 3, args =  {221}},
 		["WING_R_PART_OUT"]		= {critical_damage = 3, args =  {231}},
 		["FLAP_L_IN"]			= {critical_damage = 4, args =  {227}},
 		["FLAP_R_IN"]			= {critical_damage = 4, args =  {217}},
 
-		["FUSELAGE_BOTTOM"]		= {critical_damage = 4, args =  {152}},
-		["FUSELAGE_CENTR_TOP"]	= {critical_damage = 4, args =  {151}},
+		["FUSELAGE_BOTTOM"]		= {critical_damage = 8, args =  {152}},
+		["FUSELAGE_CENTR_TOP"]	= {critical_damage = 8, args =  {151}},
 		-- ["FUSELAGE_CENTR_L"]	= {critical_damage = 4, args =  {154}},
 		-- ["FUSELAGE_CENTR_R"]	= {critical_damage = 4, args =  {153}},
 
 		["FIN_TOP"]				= {critical_damage = 4, args =  {244}},
-		-- ["RUDDER"]				= {critical_damage = 2, args =  {247}},
+		["RUDDER"]				= {critical_damage = 2, args =  {247}},
 
-		["ENGINE_L"]			= {critical_damage = 3, args =  {167}},
+		["ENGINE_L"]			= {critical_damage = 4, args =  {167}},
 		-- ["ENGINE_R"]			= {critical_damage = 3, args =  {161}},
 
 		["STABILIZER_L_IN"]		= {critical_damage = 3, args =  {235}},
