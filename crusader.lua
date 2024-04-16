@@ -519,7 +519,7 @@ local crusader = {
 	},-- end of SFM_Data
 
 	-- Blueprint taken from Damage.lua of ED, Fencer (Scripts/Aircraft/_Common/Damage.lua)
-	Damage  = verbose_to_dmg_properties({
+	Damage = verbose_to_dmg_properties({
 		["COCKPIT"]				= {critical_damage = 2,args =  { 65}},
 		["NOSE_CENTER"]			= {critical_damage = 3,args =  {146}},
 		["NOSE_RIGHT_SIDE"] 	= {critical_damage = 3,args =  {147}},
