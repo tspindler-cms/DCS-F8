@@ -335,7 +335,8 @@ local crusader = {
 	Pylons = {
 		pylon(1, 0, 1.2, 2.50, -1.60,
 			{
-				use_full_connector_position = false,connector = "pylon_1",
+				arg = 308, arg_value = 0.0,
+				use_full_connector_position = false, connector = "pylon_1",
 			},
 			{
 				{ CLSID = "LAU3_HE151" }, --LAU-3 HE M151
@@ -353,15 +354,16 @@ local crusader = {
 				{ CLSID = "{00F5DAC4-0466-4122-998F-B1A298E34113}" }, -- M117 750LBS
 				{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
 				{ CLSID = "{DFT-300gal_LR}" },
-					{ CLSID = "{DFT-300gal_LR_EMPTY}" },
-							-- { CLSID = "{DFT-300gal_LR}",attach_point_position = { -0.10, -0.008, 0.0}}, --another posibility to fix 300 gal tank position/angle ?
-					{ CLSID = "{DFT-150gal}" },
-					{ CLSID = "{DFT-150gal_EMPTY}" },   
+				{ CLSID = "{DFT-300gal_LR_EMPTY}" },
+						-- { CLSID = "{DFT-300gal_LR}",attach_point_position = { -0.10, -0.008, 0.0}}, --another posibility to fix 300 gal tank position/angle ?
+				{ CLSID = "{DFT-150gal}" },
+				{ CLSID = "{DFT-150gal_EMPTY}" },
+				{ CLSID = "<CLEAN>", arg_value = 1.0},
 			}
 		),
 		pylon(2, 0, 1.2, 2.40, -1.75,
 			{
-				use_full_connector_position = false,connector = "pylon_3",
+				use_full_connector_position = false, connector = "pylon_3",
 			},
 			{
 					{ CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
@@ -373,7 +375,7 @@ local crusader = {
 		),
 		pylon(3, 0, 1.2, 1.34, 1.75,
 			{
-				use_full_connector_position = false,connector = "pylon_6",
+				use_full_connector_position = false, connector = "pylon_6",
 			},
 			{
 					{ CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
@@ -385,7 +387,7 @@ local crusader = {
 		),
 		pylon(4, 0, 1.2, 1.34, 1.60,
 			{
-				use_full_connector_position = false,connector = "pylon_4",
+				use_full_connector_position = false, connector = "pylon_4",
 			},
 			{
 					{ CLSID = "{AIM-9B}" ,attach_point_position = {-0.4,  -0.05, 0.0}}, --AIM-9B
@@ -397,7 +399,7 @@ local crusader = {
 		),
 		pylon(5, 0, 1.2, 1.34, 1.75,
 			{
-				use_full_connector_position = false,connector = "pylon_5",
+				use_full_connector_position = false, connector = "pylon_5",
 			},
 			{
 					{ CLSID = "{AIM-9B}" ,attach_point_position = {0.5,  0.05, 0.0}}, --AIM-9B
@@ -409,7 +411,8 @@ local crusader = {
 		),
 		pylon(6, 0, 1.2, 1.34, 1.60,
 			{
-				use_full_connector_position = false,connector = "pylon_2",
+				use_full_connector_position = false, connector = "pylon_2",
+				arg = 310, arg_value = 0
 			},
 			{
 				{ CLSID = "LAU3_HE151" }, --LAU-3 HE M151
@@ -427,15 +430,16 @@ local crusader = {
 				{ CLSID = "{00F5DAC4-0466-4122-998F-B1A298E34113}" }, -- M117 750LBS			
 				{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" }, --Mk84
 				{ CLSID = "{DFT-300gal_LR}" },
-					{ CLSID = "{DFT-300gal_LR_EMPTY}" },
-							-- { CLSID = "{DFT-300gal_LR}",attach_point_position = { -0.10, -0.008, 0.0}}, --another posibility to fix 300 gal tank position/angle ?
-					{ CLSID = "{DFT-150gal}" },
-					{ CLSID = "{DFT-150gal_EMPTY}" },
+				{ CLSID = "{DFT-300gal_LR_EMPTY}" },
+						-- { CLSID = "{DFT-300gal_LR}",attach_point_position = { -0.10, -0.008, 0.0}}, --another posibility to fix 300 gal tank position/angle ?
+				{ CLSID = "{DFT-150gal}" },
+				{ CLSID = "{DFT-150gal_EMPTY}" },
+				{ CLSID = "<CLEAN>", arg_value = 1.0},
 			}
 		),
 		pylon(7, 0, 1.2, 1.34, 1.60, --?????
 			{
-				use_full_connector_position = false,connector = "pylon_7",
+				use_full_connector_position = false, connector = "pylon_7",
 			},
 			{
 			}
