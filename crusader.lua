@@ -61,18 +61,22 @@ local crusader = {
 
 	nose_gear_pos =         {0.96, -2.100,  0},     ----1.990
 	nose_gear_wheel_diameter        =       0.566,
+	--[[
 	nose_gear_amortizer_direct_stroke        =   1.58 - 1.40, --0.220,
 	nose_gear_amortizer_reversal_stroke      =  1.25 - 1.40,
 	nose_gear_amortizer_normal_weight_stroke =  0,
+	]]
 
 	-- main_gear_pos =         {-6.92, -1.90, 0.0},    ----2.012 1.4 CTD when pilot controlled
 	main_gear_pos = 	{-6.95, -1.90, 1.4},	----2.012
+	--[[
 	main_gear_wheel_diameter        =       0.778,
 	main_gear_amortizer_direct_stroke        =  0.21,
 	main_gear_amortizer_reversal_stroke      = -0.01,
 	main_gear_amortizer_normal_weight_stroke =  0.0,
+	]]
 
-	wing_tip_pos =          {-5.214,-0.7, 5.35},-- wingtip coords for visual effects  -- was -10.214, by Toan, 28-12		
+	wing_tip_pos =          {-5.214,-0.7, 5.35},-- wingtip coords for visual effects  -- was -10.214, by Toan, 28-12
 
 	stores_number	=	7,
 	tand_gear_max	=	-5.54,   -- 83° tangent maximum yaw angle of front wheel, by Toan, 15-01-2024
@@ -165,6 +169,7 @@ local crusader = {
 	mechanimations = {
 		-- LaunchBar copied from A-4E-C for testing purposes
 		-- Does not work with the model
+		--[[
         LaunchBar = {
             {Transition = {"Retract", "Extend"}, Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "to", 0.881, "in", 4.4}}}}},
             {Transition = {"Retract", "Stage"},  Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "to", 0.815, "in", 4.4}}}}},
@@ -184,6 +189,7 @@ local crusader = {
             },
             {Transition = {"Stage", "Extend"},   Sequence = {{C = {{"ChangeDriveTo", "HydraulicGravityAssisted"}, {"VelType", 3}, {"Arg", 85, "from", 0.815, "to", 0.881, "in", 0.2}}}}},
         },
+		]]
         FoldableWings = {
 			{Transition = {"Retract", "Extend"}, Sequence = {{C = {{"Arg", 8, "to", 0.0, "in", 5.0}}}}, Flags = {"Reversible"}},
 			{Transition = {"Extend", "Retract"}, Sequence = {{C = {{"Arg", 8, "to", 1.0, "in", 15.0}}}}, Flags = {"Reversible", "StepsBackwards"}},
