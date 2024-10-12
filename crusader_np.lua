@@ -504,6 +504,9 @@ local crusader_np =  {
 
 		["STABILIZER_L_IN"]		= {critical_damage = 3, args =  {235}},
 		["STABILIZER_R_IN"]		= {critical_damage = 3, args =  {233}},
+		["Front Wheel Out"]     = {critical_damage = 1},
+		["Left Wheel Out"]      = {critical_damage = 1},
+		["Right Wheel Out"]     = {critical_damage = 1},
 		}),
 	DamageParts =
 	{
