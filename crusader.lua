@@ -467,13 +467,6 @@ local crusader = {
 				{ CLSID = "<CLEAN>", arg_value = 1.0},
 			}
 		),
-		pylon(7, 0, 1.2, 1.34, 1.60, --?????
-			{
-				use_full_connector_position = false, connector = "pylon_7",
-			},
-			{
-			}
-		),
 	},
 
 	Tasks = {
@@ -484,8 +477,6 @@ local crusader = {
 		aircraft_task(Reconnaissance),
 		aircraft_task(GroundAttack),
 		aircraft_task(CAS),
---      aircraft_task(AFAC),
---	aircraft_task(RunwayAttack),
 		aircraft_task(AntishipStrike),
     },
 	DefaultTask = aircraft_task(CAP),
